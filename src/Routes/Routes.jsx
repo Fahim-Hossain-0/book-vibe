@@ -16,7 +16,10 @@ export const router = createBrowserRouter([
       {
         index:true,
         path:"/",
-        Component:Home
+        Component:Home,
+        loader: async () => await (await fetch('/booksData.json')).json()
+
+
       }
     ]
   },
